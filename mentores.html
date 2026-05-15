@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MentorIA — Equipe</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--p:#5B21B6;--p2:#7C3AED;--pl:#EDE9FE;--t:#111827;--t2:#4B5563;--t3:#9CA3AF;--bd:#DDD6FE;--bd2:#E5E7EB;--bg:#F5F3FF;--w:#fff}
+body{background:var(--bg);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;display:flex;justify-content:center;padding:20px 12px;min-height:100vh}
+.phone{width:100%;max-width:400px;background:var(--w);border-radius:36px;border:2px solid #C4B5FD;overflow:hidden;display:flex;flex-direction:column;min-height:calc(100vh - 40px);box-shadow:0 20px 60px rgba(91,33,182,.15)}
+.sbar{height:50px;background:linear-gradient(135deg,#3B1494,var(--p2));display:flex;align-items:center;justify-content:space-between;padding:0 22px;flex-shrink:0}
+.logo{color:#fff;font-size:19px;font-weight:800;letter-spacing:-.5px}.logo em{color:#C4B5FD;font-style:normal}
+.hdr{background:linear-gradient(145deg,#0F172A,#334155);padding:18px 20px 24px;color:#fff;flex-shrink:0;position:relative;overflow:hidden}
+.hdr::before{content:'';position:absolute;width:180px;height:180px;border-radius:50%;background:rgba(255,255,255,.05);top:-50px;right:-30px}
+.hdr h2{font-size:21px;font-weight:800;position:relative}
+.hdr p{font-size:13px;opacity:.75;margin-top:4px;position:relative}
+.back-bar{display:flex;align-items:center;padding:12px 16px;background:var(--w);border-bottom:1px solid var(--bd2)}
+.back-btn{background:none;border:none;color:var(--p);font-size:13px;font-weight:600;cursor:pointer;font-family:inherit;display:flex;align-items:center;gap:4px}
+.body{flex:1;padding:14px;overflow-y:auto}
+.slbl{font-size:11px;font-weight:700;color:var(--t3);text-transform:uppercase;letter-spacing:.6px;margin-bottom:10px}
+.ecard{background:var(--w);border-radius:16px;padding:16px;margin-bottom:12px;border:1px solid var(--bd2);box-shadow:0 1px 4px rgba(0,0,0,.04)}
+.ehead{display:flex;align-items:flex-start;gap:14px;margin-bottom:12px}
+.av{width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:800;color:#fff;flex-shrink:0;position:relative}
+.av::after{content:'';position:absolute;bottom:2px;right:2px;width:13px;height:13px;border-radius:50%;background:#10B981;border:2px solid var(--w)}
+.mname{font-size:15px;font-weight:800;color:var(--t);line-height:1.2}
+.msub{font-size:12px;color:var(--t2);margin-top:3px;line-height:1.4}
+.erole{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;padding:3px 10px;border-radius:20px;display:inline-block;margin-top:6px}
+.mstats{display:flex;align-items:center;gap:10px;margin-bottom:10px;padding:10px 12px;background:var(--bg);border-radius:12px}
+.mstats .stars{color:#F59E0B;font-size:14px}
+.mstats .rating{font-size:13px;font-weight:700;color:var(--t);margin-left:2px}
+.mstats .online{margin-left:auto;display:flex;align-items:center;gap:5px;font-size:11px;color:#059669;font-weight:600}
+.mstats .online::before{content:'';width:7px;height:7px;border-radius:50%;background:#10B981;flex-shrink:0}
+.etags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+.etag{font-size:11px;font-weight:600;padding:4px 12px;border-radius:20px}
+.sol-btn{width:100%;padding:13px;border:none;border-radius:14px;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit;color:#fff;transition:opacity .15s}
+.sol-btn:hover{opacity:.88}
+.footer{text-align:center;padding:20px 0 8px;font-size:11px;color:var(--t3);line-height:1.8}
+.footer strong{color:var(--p);font-size:12px}
+</style>
+</head>
+<body>
+<div class="phone">
+  <div class="sbar">
+    <div class="logo">Mentor<em>IA</em></div>
+  </div>
+  <div class="hdr">
+    <h2>👥 Equipe MentorIA</h2>
+    <p>Conheça o time por trás do projeto acadêmico</p>
+  </div>
+  <div class="back-bar">
+    <button class="back-btn" onclick="history.back()">← Voltar ao app</button>
+  </div>
+  <div class="body">
+    <div class="slbl">Integrantes do grupo · 2026</div>
+
+    <!-- RAMON -->
+    <div class="ecard">
+      <div class="ehead">
+        <div class="av" style="background:#7C3AED">RO</div>
+        <div>
+          <div class="mname">Ramon Oliveira Amaral</div>
+          <div class="msub">Gestão de Projetos · Coordenação<br>Metodologia Ágil · Scrum</div>
+          <span class="erole" style="background:#EDE9FE;color:#5B21B6">👑 Líder do Projeto</span>
+        </div>
+      </div>
+      <div class="mstats">
+        <span class="stars">★★★★★</span>
+        <span class="rating">5.0</span>
+        <span style="font-size:11px;color:var(--t3)">· 47 sessões</span>
+        <span class="online">Online agora</span>
+      </div>
+      <div class="etags">
+        <span class="etag" style="background:#EDE9FE;color:#5B21B6">Scrum Master</span>
+        <span class="etag" style="background:#EDE9FE;color:#5B21B6">Gestão Ágil</span>
+        <span class="etag" style="background:#EDE9FE;color:#5B21B6">Coordenação</span>
+        <span class="etag" style="background:#EDE9FE;color:#5B21B6">Liderança</span>
+      </div>
+      <button class="sol-btn" style="background:linear-gradient(135deg,#5B21B6,#7C3AED)">Solicitar mentoria</button>
+    </div>
+
+    <!-- GUSTAVO -->
+    <div class="ecard">
+      <div class="ehead">
+        <div class="av" style="background:#0891B2">GV</div>
+        <div>
+          <div class="mname">Gustavo Vaz Gasparoto</div>
+          <div class="msub">UI/UX Design · Figma · Prototipação<br>Frontend · Lovable</div>
+          <span class="erole" style="background:#E0F2FE;color:#0E7490">🎨 Interface do Site</span>
+        </div>
+      </div>
+      <div class="mstats">
+        <span class="stars">★★★★★</span>
+        <span class="rating">4.9</span>
+        <span style="font-size:11px;color:var(--t3)">· 38 sessões</span>
+        <span class="online">Online agora</span>
+      </div>
+      <div class="etags">
+        <span class="etag" style="background:#E0F2FE;color:#0E7490">Figma</span>
+        <span class="etag" style="background:#E0F2FE;color:#0E7490">UI/UX</span>
+        <span class="etag" style="background:#E0F2FE;color:#0E7490">Lovable</span>
+        <span class="etag" style="background:#E0F2FE;color:#0E7490">Prototipação</span>
+      </div>
+      <button class="sol-btn" style="background:linear-gradient(135deg,#0E7490,#0EA5E9)">Solicitar mentoria</button>
+    </div>
+
+    <!-- WALLACY -->
+    <div class="ecard">
+      <div class="ehead">
+        <div class="av" style="background:#059669">WS</div>
+        <div>
+          <div class="mname">Wallacy Souza</div>
+          <div class="msub">React Native · App Mobile<br>Integração com IA · JavaScript</div>
+          <span class="erole" style="background:#D1FAE5;color:#065F46">📱 Desenvolvedor do App</span>
+        </div>
+      </div>
+      <div class="mstats">
+        <span class="stars">★★★★★</span>
+        <span class="rating">4.9</span>
+        <span style="font-size:11px;color:var(--t3)">· 52 sessões</span>
+        <span class="online">Online agora</span>
+      </div>
+      <div class="etags">
+        <span class="etag" style="background:#D1FAE5;color:#065F46">React Native</span>
+        <span class="etag" style="background:#D1FAE5;color:#065F46">IA</span>
+        <span class="etag" style="background:#D1FAE5;color:#065F46">Mobile</span>
+        <span class="etag" style="background:#D1FAE5;color:#065F46">JavaScript</span>
+      </div>
+      <button class="sol-btn" style="background:linear-gradient(135deg,#065F46,#059669)">Solicitar mentoria</button>
+    </div>
+
+    <!-- PEDRO -->
+    <div class="ecard">
+      <div class="ehead">
+        <div class="av" style="background:#D97706">PM</div>
+        <div>
+          <div class="mname">Pedro Miguel Bezerra</div>
+          <div class="msub">PostgreSQL · MER · DER<br>Dicionário de Dados · SQL</div>
+          <span class="erole" style="background:#FEF3C7;color:#92400E">🗄️ Banco de Dados</span>
+        </div>
+      </div>
+      <div class="mstats">
+        <span class="stars">★★★★★</span>
+        <span class="rating">4.8</span>
+        <span style="font-size:11px;color:var(--t3)">· 29 sessões</span>
+        <span class="online">Online agora</span>
+      </div>
+      <div class="etags">
+        <span class="etag" style="background:#FEF3C7;color:#92400E">PostgreSQL</span>
+        <span class="etag" style="background:#FEF3C7;color:#92400E">MER/DER</span>
+        <span class="etag" style="background:#FEF3C7;color:#92400E">SQL</span>
+        <span class="etag" style="background:#FEF3C7;color:#92400E">DBA</span>
+      </div>
+      <button class="sol-btn" style="background:linear-gradient(135deg,#92400E,#D97706)">Solicitar mentoria</button>
+    </div>
+
+    <div class="footer">
+      <strong>MentorIA</strong><br>
+      Aplicativo de Mentoria e Alfabetização Tecnológica<br>
+      para Escolas Públicas · Projeto Acadêmico 2026
+    </div>
+  </div>
+</div>
+</body>
+</html>
