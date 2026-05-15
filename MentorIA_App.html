@@ -89,11 +89,35 @@ textarea::placeholder{color:var(--t3)}
 .erole{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;padding:3px 10px;border-radius:20px;display:inline-block;margin-top:4px}
 .etags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
 .etag{font-size:10px;font-weight:600;padding:3px 10px;border-radius:20px}
-.tabs{display:grid;grid-template-columns:repeat(4,1fr);background:var(--w);border-top:1px solid var(--bd2);padding:8px 0 20px;flex-shrink:0}
-.tab{display:flex;flex-direction:column;align-items:center;gap:3px;border:none;background:none;cursor:pointer;padding:5px 4px;color:var(--t3);font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.4px;font-family:inherit;transition:color .2s}
+
+.trilha-card{background:var(--w);border-radius:16px;padding:14px 16px;margin-bottom:10px;border:1px solid var(--bd2);cursor:pointer;transition:border-color .2s,transform .12s}
+.trilha-card:hover{border-color:var(--bd);transform:translateY(-1px)}
+.trilha-head{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+.trilha-ic{width:46px;height:46px;border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0}
+.trilha-info h4{font-size:14px;font-weight:700;color:var(--t);line-height:1.2}
+.trilha-info p{font-size:11px;color:var(--t2);margin-top:2px}
+.nivel-badge{display:inline-block;font-size:10px;font-weight:700;padding:2px 8px;border-radius:20px;margin-top:4px}
+.nivel-ini{background:#D1FAE5;color:#065F46}
+.nivel-int{background:#DBEAFE;color:#1E40AF}
+.nivel-avd{background:#EDE9FE;color:#4C1D95}
+.prog-bar{height:7px;background:var(--bd2);border-radius:20px;overflow:hidden;margin:8px 0 4px}
+.prog-fill{height:100%;border-radius:20px;background:linear-gradient(90deg,var(--p),var(--p2))}
+.prog-info{display:flex;justify-content:space-between;font-size:11px;color:var(--t3)}
+.tril-btn{width:100%;padding:10px;border:none;border-radius:12px;font-size:12px;font-weight:700;cursor:pointer;font-family:inherit;margin-top:8px;transition:opacity .15s}
+.tril-btn:hover{opacity:.88}
+.xp-card{background:linear-gradient(135deg,var(--p),var(--p2));border-radius:16px;padding:14px 16px;margin-bottom:14px;color:#fff;display:flex;align-items:center;gap:14px}
+.xp-av{width:52px;height:52px;border-radius:50%;background:rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:800;flex-shrink:0}
+.xp-info h4{font-size:15px;font-weight:800;color:#fff}
+.xp-info p{font-size:11px;color:rgba(255,255,255,.75);margin-top:1px}
+.xp-bar-wrap{background:rgba(255,255,255,.2);border-radius:20px;height:8px;margin-top:8px;overflow:hidden}
+.xp-bar-fill{height:100%;border-radius:20px;background:#fff}
+
+
+.tabs{display:flex;background:var(--w);border-top:1px solid var(--bd2);padding:6px 0 18px;flex-shrink:0}
+.tab{flex:1 1 0;min-width:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;border:none;background:none;cursor:pointer;padding:4px 0;color:var(--t3);font-size:7.5px;font-weight:700;text-transform:uppercase;letter-spacing:0;font-family:inherit;transition:color .2s;overflow:hidden;white-space:nowrap}
 .tab.act{color:var(--p)}
-.tab svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.tab .dot{width:4px;height:4px;border-radius:50%;background:var(--p);opacity:0;transition:opacity .2s;margin-top:1px}
+.tab svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+.tab .dot{width:4px;height:4px;border-radius:50%;background:var(--p);opacity:0;transition:opacity .2s}
 .tab.act .dot{opacity:1}
 </style>
 </head>
@@ -123,20 +147,31 @@ textarea::placeholder{color:var(--t3)}
         <button class="abtn bc" onclick="go('s-voz');st(2)"><div class="ic">🎙️</div><div class="tx">Falar minha dúvida<small>Diga em voz alta</small></div><div class="arr">›</div></button>
         <button class="abtn bv" onclick="go('s-texto')"><div class="ic">✍️</div><div class="tx">Digitar a pergunta<small>Escreva sua dúvida</small></div><div class="arr">›</div></button>
         <div class="slbl" style="margin-top:4px">Equipe disponível <a onclick="go('s-mentores');st(3)">Ver todos</a></div>
-        <div class="mentor" onclick="go('s-mentores');st(3)">
-          <div class="av" style="background:#7C3AED">RO</div>
-          <div style="flex:1"><div class="mname">Ramon Oliveira Amaral</div><div class="msub">Líder · Gestão e Coordenação</div><span class="mbadge">👑 Líder</span></div>
+        <div class="mentor" onclick="go('s-mentores');st(4)">
+          <div class="av" style="background:#6D28D9">RO</div>
+          <div style="flex:1">
+            <div class="mname">Ramon Oliveira Amaral</div>
+            <div class="msub">Gestão · Coordenação</div>
+            <span class="mbadge">👑 Líder do Projeto</span>
+          </div>
           <div class="mstar"><div class="s">★★★★★</div><small style="color:#10B981">Online</small></div>
         </div>
-        <div class="mentor" onclick="go('s-mentores');st(3)">
-          <div class="av" style="background:#0891B2">WS</div>
+        <div class="mentor" onclick="go('s-mentores');st(4)">
+          <div class="av" style="background:#059669">WS</div>
+          <div style="flex:1">
+            <div class="mname">Wallacy Rodrigues de Souza</div>
+            <div class="msub">React Native · IA · Mobile</div>
+            <span class="mbadge">📱 Desenvolvedor do App</span>
+          </div>
+          <div class="mstar"><div class="s">★★★★★</div><small style="color:#10B981">Online</small></div>
+        </div>
           <div style="flex:1"><div class="mname">Wallacy Souza</div><div class="msub">Desenvolvedor · App Mobile</div><span class="mbadge">📱 App</span></div>
           <div class="mstar"><div class="s">★★★★★</div><small style="color:#10B981">Online</small></div>
         </div>
       </div>
-    </div>
+    
 
-    <!-- FOTO -->
+<!-- FOTO -->
     <div id="s-foto" class="screen">
       <div class="hdr purple">
         <button class="back" onclick="go('s-home');st(0)">← Voltar</button>
@@ -200,98 +235,291 @@ textarea::placeholder{color:var(--t3)}
       </div>
     </div>
 
+
+    <!-- TRILHAS -->
+    <div id="s-trilhas" class="screen">
+      <div class="hdr" style="background:linear-gradient(145deg,#451A03,#D97706)">
+        <h2>📚 Trilhas de Aprendizado</h2>
+        <p>Aprenda no seu ritmo e ganhe XP</p>
+      </div>
+      <div class="body">
+        <div class="xp-card">
+          <div class="xp-av">5</div>
+          <div class="xp-info" style="flex:1">
+            <h4>Nível 5 — 680 XP</h4>
+            <p>320 XP para o Nível 6</p>
+            <div class="xp-bar-wrap"><div class="xp-bar-fill" style="width:68%"></div></div>
+          </div>
+          <div style="text-align:right;flex-shrink:0">
+            <div style="font-size:22px;font-weight:800;color:#fff">🏆</div>
+            <div style="font-size:10px;color:rgba(255,255,255,.75);margin-top:2px">Rank #4</div>
+          </div>
+        </div>
+
+        <div class="slbl">Em andamento</div>
+
+        <div class="trilha-card">
+          <div class="trilha-head">
+            <div class="trilha-ic" style="background:#FEF3C7">💻</div>
+            <div class="trilha-info">
+              <h4>Computador do Zero</h4>
+              <p>5 de 8 módulos concluídos</p>
+              <span class="nivel-badge nivel-ini">Iniciante</span>
+            </div>
+            <div style="margin-left:auto;text-align:right;flex-shrink:0">
+              <div style="font-size:18px;font-weight:800;color:var(--p)">+80</div>
+              <div style="font-size:10px;color:var(--t3)">XP ganho</div>
+            </div>
+          </div>
+          <div class="prog-bar"><div class="prog-fill" style="width:62%"></div></div>
+          <div class="prog-info"><span>62% concluído</span><span>3 módulos restantes</span></div>
+          <button class="tril-btn" style="background:var(--p);color:#fff">Continuar trilha →</button>
+        </div>
+
+        <div class="trilha-card">
+          <div class="trilha-head">
+            <div class="trilha-ic" style="background:#E0F2FE">📱</div>
+            <div class="trilha-info">
+              <h4>Celular e Internet</h4>
+              <p>2 de 6 módulos concluídos</p>
+              <span class="nivel-badge nivel-ini">Iniciante</span>
+            </div>
+            <div style="margin-left:auto;text-align:right;flex-shrink:0">
+              <div style="font-size:18px;font-weight:800;color:var(--p)">+20</div>
+              <div style="font-size:10px;color:var(--t3)">XP ganho</div>
+            </div>
+          </div>
+          <div class="prog-bar"><div class="prog-fill" style="width:33%"></div></div>
+          <div class="prog-info"><span>33% concluído</span><span>4 módulos restantes</span></div>
+          <button class="tril-btn" style="background:var(--p);color:#fff">Continuar trilha →</button>
+        </div>
+
+        <div class="slbl" style="margin-top:4px">Disponíveis para começar</div>
+
+        <div class="trilha-card">
+          <div class="trilha-head">
+            <div class="trilha-ic" style="background:#D1FAE5">📧</div>
+            <div class="trilha-info">
+              <h4>E-mail e Redes Sociais</h4>
+              <p>0 de 5 módulos · Gratuito</p>
+              <span class="nivel-badge nivel-ini">Iniciante</span>
+            </div>
+          </div>
+          <div class="prog-bar"><div class="prog-fill" style="width:0%"></div></div>
+          <div class="prog-info"><span>Não iniciado</span><span>5 módulos</span></div>
+          <button class="tril-btn" style="background:var(--g2);color:#fff">Começar agora →</button>
+        </div>
+
+        <div class="trilha-card">
+          <div class="trilha-head">
+            <div class="trilha-ic" style="background:#EDE9FE">🖥️</div>
+            <div class="trilha-info">
+              <h4>Lógica de Programação</h4>
+              <p>0 de 10 módulos · Gratuito</p>
+              <span class="nivel-badge nivel-int">Intermediário</span>
+            </div>
+          </div>
+          <div class="prog-bar"><div class="prog-fill" style="width:0%"></div></div>
+          <div class="prog-info"><span>Não iniciado</span><span>10 módulos · +100 XP</span></div>
+          <button class="tril-btn" style="background:var(--p2);color:#fff">Começar agora →</button>
+        </div>
+
+        <div class="trilha-card">
+          <div class="trilha-head">
+            <div class="trilha-ic" style="background:#FEE2E2">🤖</div>
+            <div class="trilha-info">
+              <h4>Inteligência Artificial</h4>
+              <p>0 de 8 módulos · Gratuito</p>
+              <span class="nivel-badge nivel-avd">Avançado</span>
+            </div>
+          </div>
+          <div class="prog-bar"><div class="prog-fill" style="width:0%"></div></div>
+          <div class="prog-info"><span>Não iniciado</span><span>8 módulos · +80 XP</span></div>
+          <button class="tril-btn" style="background:#7C3AED;color:#fff">Começar agora →</button>
+        </div>
+      </div>
+    </div>
+
     <!-- EQUIPE -->
     <div id="s-mentores" class="screen">
       <div class="hdr dark">
         <h2>👥 Equipe MentorIA</h2>
-        <p>Conheça o time por trás do projeto</p>
+        <p>8 integrantes · Projeto Acadêmico 2026</p>
       </div>
       <div class="body">
-        <div class="slbl">Integrantes do grupo</div>
+        <div class="slbl">Todos os integrantes</div>
 
         <div class="ecard">
           <div class="ehead">
-            <div class="av" style="background:#7C3AED;width:52px;height:52px;font-size:17px">RO</div>
-            <div style="flex:1">
-              <div style="font-size:15px;font-weight:800;color:var(--t)">Ramon Oliveira Amaral</div>
-              <div style="font-size:12px;color:var(--t2)">Gestão · Coordenação · Metodologia</div>
-              <span class="erole" style="background:#EDE9FE;color:#5B21B6">👑 Líder do Projeto</span>
+            <div style="position:relative;width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:800;color:#fff;flex-shrink:0;background:#6D28D9">
+              RO<span style="position:absolute;bottom:1px;right:1px;width:12px;height:12px;border-radius:50%;background:#10B981;border:2px solid var(--w)"></span>
             </div>
-            <div style="text-align:right"><div style="color:#F59E0B;font-size:13px">★★★★★</div><div style="font-size:10px;color:#10B981;font-weight:600;margin-top:2px">● Online</div></div>
+            <div style="flex:1;min-width:0">
+              <div style="font-size:14px;font-weight:800;color:var(--t);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Ramon Oliveira Amaral</div>
+              <div style="font-size:11px;color:var(--t2);margin-top:1px">Gestão · Coordenação</div>
+              <span style="font-size:10px;font-weight:700;text-transform:uppercase;padding:2px 8px;border-radius:20px;display:inline-block;margin-top:4px;background:#EDE9FE;color:#5B21B6">👑 Líder do Projeto</span>
+            </div>
+            <div style="text-align:right;flex-shrink:0;margin-left:6px">
+              <div style="color:#F59E0B;font-size:12px">★★★★★</div>
+              <div style="font-size:10px;font-weight:600;color:#10B981;margin-top:1px">● Online</div>
+            </div>
           </div>
-          <div class="etags">
-            <span class="etag" style="background:#EDE9FE;color:#5B21B6">Scrum</span>
-            <span class="etag" style="background:#EDE9FE;color:#5B21B6">Gestão Ágil</span>
-            <span class="etag" style="background:#EDE9FE;color:#5B21B6">Coordenação</span>
-          </div>
-          <button style="width:100%;padding:12px;background:#7C3AED;color:#fff;border:none;border-radius:12px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit">Solicitar mentoria</button>
+          <div style="font-size:10px;color:var(--t3);margin-bottom:8px">RGM: 43053921</div>
+          <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px"><span style="font-size:10px;font-weight:600;padding:3px 10px;border-radius:20px;background:#EDE9FE;color:#5B21B6">Scrum</span><span style="font-size:10px;font-weight:600;padding:3px 10px;border-radius:20px;background:#EDE9FE;color:#5B21B6">Gestão Ágil</span><span style="font-size:10px;font-weight:600;padding:3px 10px;border-radius:20px;background:#EDE9FE;color:#5B21B6">Liderança</span></div>
+          <button style="width:100%;padding:12px;background:#6D28D9;color:#fff;border:none;border-radius:12px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit" >Solicitar mentoria</button>
         </div>
 
         <div class="ecard">
           <div class="ehead">
-            <div class="av" style="background:#0891B2;width:52px;height:52px;font-size:17px">GV</div>
-            <div style="flex:1">
-              <div style="font-size:15px;font-weight:800;color:var(--t)">Gustavo Vaz Gasparoto</div>
-              <div style="font-size:12px;color:var(--t2)">UI/UX Design · Figma · Frontend</div>
-              <span class="erole" style="background:#E0F2FE;color:#0E7490">🎨 Interface do Site</span>
+            <div style="position:relative;width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:800;color:#fff;flex-shrink:0;background:#0891B2">
+              GV<span style="position:absolute;bottom:1px;right:1px;width:12px;height:12px;border-radius:50%;background:#10B981;border:2px solid var(--w)"></span>
             </div>
-            <div style="text-align:right"><div style="color:#F59E0B;font-size:13px">★★★★★</div><div style="font-size:10px;color:#10B981;font-weight:600;margin-top:2px">● Online</div></div>
+            <div style="flex:1;min-width:0">
+              <div style="font-size:14px;font-weight:800;color:var(--t);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Gustavo Vaz Gasparoto</div>
+              <div style="font-size:11px;color:var(--t2);margin-top:1px">UI/UX Design · Figma</div>
+              <span style="font-size:10px;font-weight:700;text-transform:uppercase;padding:2px 8px;border-radius:20px;display:inline-block;margin-top:4px;background:#E0F2FE;color:#0E7490">🎨 Interface do Site</span>
+            </div>
+            <div style="text-align:right;flex-shrink:0;margin-left:6px">
+              <div style="color:#F59E0B;font-size:12px">★★★★★</div>
+              <div style="font-size:10px;font-weight:600;color:#10B981;margin-top:1px">● Online</div>
+            </div>
           </div>
-          <div class="etags">
-            <span class="etag" style="background:#E0F2FE;color:#0E7490">Figma</span>
-            <span class="etag" style="background:#E0F2FE;color:#0E7490">UI/UX</span>
-            <span class="etag" style="background:#E0F2FE;color:#0E7490">Lovable</span>
-          </div>
-          <button style="width:100%;padding:12px;background:#0891B2;color:#fff;border:none;border-radius:12px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit">Solicitar mentoria</button>
+          <div style="font-size:10px;color:var(--t3);margin-bottom:8px">RGM: 43321585</div>
+          <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px"><span style="font-size:10px;font-weight:600;padding:3px 10px;border-radius:20px;background:#E0F2FE;color:#0E7490">Figma</span><span style="font-size:10px;font-weight:600;padding:3px 10px;border-radius:20px;background:#E0F2FE;color:#0E7490">UI/UX</span><span style="font-size:10px;font-weight:600;padding:3px 10px;border-radius:20px;background:#E0F2FE;color:#0E7490">Lovable</span></div>
+          <button style="width:100%;padding:12px;background:#0891B2;color:#fff;border:none;border-radius:12px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit" >Solicitar mentoria</button>
         </div>
 
         <div class="ecard">
           <div class="ehead">
-            <div class="av" style="background:#059669;width:52px;height:52px;font-size:17px">WS</div>
-            <div style="flex:1">
-              <div style="font-size:15px;font-weight:800;color:var(--t)">Wallacy Souza</div>
-              <div style="font-size:12px;color:var(--t2)">React Native · App Mobile · IA</div>
-              <span class="erole" style="background:#D1FAE5;color:#065F46">📱 Desenvolvedor do App</span>
+            <div style="position:relative;width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:800;color:#fff;flex-shrink:0;background:#059669">
+              WS<span style="position:absolute;bottom:1px;right:1px;width:12px;height:12px;border-radius:50%;background:#10B981;border:2px solid var(--w)"></span>
             </div>
-            <div style="text-align:right"><div style="color:#F59E0B;font-size:13px">★★★★★</div><div style="font-size:10px;color:#10B981;font-weight:600;margin-top:2px">● Online</div></div>
+            <div style="flex:1;min-width:0">
+              <div style="font-size:14px;font-weight:800;color:var(--t);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Wallacy Rodrigues de Souza</div>
+              <div style="font-size:11px;color:var(--t2);margin-top:1px">React Native · IA · Mobile</div>
+              <span style="font-size:10px;font-weight:700;text-transform:uppercase;padding:2px 8px;border-radius:20px;display:inline-block;margin-top:4px;background:#D1FAE5;color:#065F46">📱 Desenvolvedor do App</span>
+            </div>
+            <div style="text-align:right;flex-shrink:0;margin-left:6px">
+              <div style="color:#F59E0B;font-size:12px">★★★★★</div>
+              <div style="font-size:10px;font-weight:600;color:#10B981;margin-top:1px">● Online</div>
+            </div>
           </div>
-          <div class="etags">
-            <span class="etag" style="background:#D1FAE5;color:#065F46">React Native</span>
-            <span class="etag" style="background:#D1FAE5;color:#065F46">IA</span>
-            <span class="etag" style="background:#D1FAE5;color:#065F46">Mobile</span>
-          </div>
-          <button style="width:100%;padding:12px;background:#059669;color:#fff;border:none;border-radius:12px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit">Solicitar mentoria</button>
+          <div style="font-size:10px;color:var(--t3);margin-bottom:8px">RGM: 42420563</div>
+          <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px"><span style="font-size:10px;font-weight:600;padding:3px 10px;border-radius:20px;background:#D1FAE5;color:#065F46">React Native</span><span style="font-size:10px;font-weight:600;padding:3px 10px;border-radius:20px;background:#D1FAE5;color:#065F46">IA</span><span style="font-size:10px;font-weight:600;padding:3px 10px;border-radius:20px;background:#D1FAE5;color:#065F46">Mobile</span></div>
+          <button style="width:100%;padding:12px;background:#059669;color:#fff;border:none;border-radius:12px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit" >Solicitar mentoria</button>
         </div>
 
         <div class="ecard">
           <div class="ehead">
-            <div class="av" style="background:#D97706;width:52px;height:52px;font-size:17px">PM</div>
-            <div style="flex:1">
-              <div style="font-size:15px;font-weight:800;color:var(--t)">Pedro Miguel Bezerra</div>
-              <div style="font-size:12px;color:var(--t2)">PostgreSQL · MER/DER · SQL</div>
-              <span class="erole" style="background:#FEF3C7;color:#92400E">🗄️ Banco de Dados</span>
+            <div style="position:relative;width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:800;color:#fff;flex-shrink:0;background:#D97706">
+              PM<span style="position:absolute;bottom:1px;right:1px;width:12px;height:12px;border-radius:50%;background:#10B981;border:2px solid var(--w)"></span>
             </div>
-            <div style="text-align:right"><div style="color:#F59E0B;font-size:13px">★★★★★</div><div style="font-size:10px;color:#10B981;font-weight:600;margin-top:2px">● Online</div></div>
+            <div style="flex:1;min-width:0">
+              <div style="font-size:14px;font-weight:800;color:var(--t);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Pedro Miguel Bezerra da Silva</div>
+              <div style="font-size:11px;color:var(--t2);margin-top:1px">PostgreSQL · MER/DER · SQL</div>
+              <span style="font-size:10px;font-weight:700;text-transform:uppercase;padding:2px 8px;border-radius:20px;display:inline-block;margin-top:4px;background:#FEF3C7;color:#92400E">🗄️ Banco de Dados</span>
+            </div>
+            <div style="text-align:right;flex-shrink:0;margin-left:6px">
+              <div style="color:#F59E0B;font-size:12px">★★★★☆</div>
+              <div style="font-size:10px;font-weight:600;color:#10B981;margin-top:1px">● Online</div>
+            </div>
           </div>
-          <div class="etags">
-            <span class="etag" style="background:#FEF3C7;color:#92400E">PostgreSQL</span>
-            <span class="etag" style="background:#FEF3C7;color:#92400E">MER/DER</span>
-            <span class="etag" style="background:#FEF3C7;color:#92400E">SQL</span>
-          </div>
-          <button style="width:100%;padding:12px;background:#D97706;color:#fff;border:none;border-radius:12px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit">Solicitar mentoria</button>
+          <div style="font-size:10px;color:var(--t3);margin-bottom:8px">RGM: 42996716</div>
+          <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px"><span style="font-size:10px;font-weight:600;padding:3px 10px;border-radius:20px;background:#FEF3C7;color:#92400E">PostgreSQL</span><span style="font-size:10px;font-weight:600;padding:3px 10px;border-radius:20px;background:#FEF3C7;color:#92400E">MER/DER</span><span style="font-size:10px;font-weight:600;padding:3px 10px;border-radius:20px;background:#FEF3C7;color:#92400E">SQL</span></div>
+          <button style="width:100%;padding:12px;background:#D97706;color:#fff;border:none;border-radius:12px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit" >Solicitar mentoria</button>
         </div>
 
+        <div class="ecard">
+          <div class="ehead">
+            <div style="position:relative;width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:800;color:#fff;flex-shrink:0;background:#DC2626">
+              DL<span style="position:absolute;bottom:1px;right:1px;width:12px;height:12px;border-radius:50%;background:#10B981;border:2px solid var(--w)"></span>
+            </div>
+            <div style="flex:1;min-width:0">
+              <div style="font-size:14px;font-weight:800;color:var(--t);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Douglas Leal Gonçalves</div>
+              <div style="font-size:11px;color:var(--t2);margin-top:1px">FastAPI · Python · API</div>
+              <span style="font-size:10px;font-weight:700;text-transform:uppercase;padding:2px 8px;border-radius:20px;display:inline-block;margin-top:4px;background:#FEE2E2;color:#991B1B">⚙️ Desenvolvedor Backend</span>
+            </div>
+            <div style="text-align:right;flex-shrink:0;margin-left:6px">
+              <div style="color:#F59E0B;font-size:12px">★★★★☆</div>
+              <div style="font-size:10px;font-weight:600;color:#10B981;margin-top:1px">● Online</div>
+            </div>
+          </div>
+          <div style="font-size:10px;color:var(--t3);margin-bottom:8px">RGM: 42566525</div>
+          <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px"><span style="font-size:10px;font-weight:600;padding:3px 10px;border-radius:20px;background:#FEE2E2;color:#991B1B">FastAPI</span><span style="font-size:10px;font-weight:600;padding:3px 10px;border-radius:20px;background:#FEE2E2;color:#991B1B">Python</span><span style="font-size:10px;font-weight:600;padding:3px 10px;border-radius:20px;background:#FEE2E2;color:#991B1B">REST API</span></div>
+          <button style="width:100%;padding:12px;background:#DC2626;color:#fff;border:none;border-radius:12px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit" >Solicitar mentoria</button>
+        </div>
+
+        <div class="ecard">
+          <div class="ehead">
+            <div style="position:relative;width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:800;color:#fff;flex-shrink:0;background:#0F766E">
+              DP<span style="position:absolute;bottom:1px;right:1px;width:12px;height:12px;border-radius:50%;background:#9CA3AF;border:2px solid var(--w)"></span>
+            </div>
+            <div style="flex:1;min-width:0">
+              <div style="font-size:14px;font-weight:800;color:var(--t);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Daniel de Oliveira Perederko da Silva</div>
+              <div style="font-size:11px;color:var(--t2);margin-top:1px">Gemini API · Speech-to-Text</div>
+              <span style="font-size:10px;font-weight:700;text-transform:uppercase;padding:2px 8px;border-radius:20px;display:inline-block;margin-top:4px;background:#CCFBF1;color:#134E4A">🤖 Integração com IA</span>
+            </div>
+            <div style="text-align:right;flex-shrink:0;margin-left:6px">
+              <div style="color:#F59E0B;font-size:12px">★★★★★</div>
+              <div style="font-size:10px;font-weight:600;color:#9CA3AF;margin-top:1px">● Offline</div>
+            </div>
+          </div>
+          <div style="font-size:10px;color:var(--t3);margin-bottom:8px">RGM: 43422471</div>
+          <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px"><span style="font-size:10px;font-weight:600;padding:3px 10px;border-radius:20px;background:#CCFBF1;color:#134E4A">Gemini API</span><span style="font-size:10px;font-weight:600;padding:3px 10px;border-radius:20px;background:#CCFBF1;color:#134E4A">Speech-to-Text</span><span style="font-size:10px;font-weight:600;padding:3px 10px;border-radius:20px;background:#CCFBF1;color:#134E4A">IA</span></div>
+          <button style="width:100%;padding:12px;background:#9CA3AF;color:#fff;border:none;border-radius:12px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit" disabled>Solicitar mentoria</button>
+        </div>
+
+        <div class="ecard">
+          <div class="ehead">
+            <div style="position:relative;width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:800;color:#fff;flex-shrink:0;background:#7C3AED">
+              EM<span style="position:absolute;bottom:1px;right:1px;width:12px;height:12px;border-radius:50%;background:#9CA3AF;border:2px solid var(--w)"></span>
+            </div>
+            <div style="flex:1;min-width:0">
+              <div style="font-size:14px;font-weight:800;color:var(--t);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Edson Murilo Brumelo Campos</div>
+              <div style="font-size:11px;color:var(--t2);margin-top:1px">Documentação · LGPD · Escopo</div>
+              <span style="font-size:10px;font-weight:700;text-transform:uppercase;padding:2px 8px;border-radius:20px;display:inline-block;margin-top:4px;background:#EDE9FE;color:#4C1D95">📋 Documentação e Escopo</span>
+            </div>
+            <div style="text-align:right;flex-shrink:0;margin-left:6px">
+              <div style="color:#F59E0B;font-size:12px">★★★★☆</div>
+              <div style="font-size:10px;font-weight:600;color:#9CA3AF;margin-top:1px">● Offline</div>
+            </div>
+          </div>
+          <div style="font-size:10px;color:var(--t3);margin-bottom:8px">RGM: 42487218</div>
+          <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px"><span style="font-size:10px;font-weight:600;padding:3px 10px;border-radius:20px;background:#EDE9FE;color:#4C1D95">Documentação</span><span style="font-size:10px;font-weight:600;padding:3px 10px;border-radius:20px;background:#EDE9FE;color:#4C1D95">Escopo</span><span style="font-size:10px;font-weight:600;padding:3px 10px;border-radius:20px;background:#EDE9FE;color:#4C1D95">LGPD</span></div>
+          <button style="width:100%;padding:12px;background:#9CA3AF;color:#fff;border:none;border-radius:12px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit" disabled>Solicitar mentoria</button>
+        </div>
+
+        <div class="ecard">
+          <div class="ehead">
+            <div style="position:relative;width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:800;color:#fff;flex-shrink:0;background:#1D4ED8">
+              IS<span style="position:absolute;bottom:1px;right:1px;width:12px;height:12px;border-radius:50%;background:#9CA3AF;border:2px solid var(--w)"></span>
+            </div>
+            <div style="flex:1;min-width:0">
+              <div style="font-size:14px;font-weight:800;color:var(--t);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Igor Sant'ana Medeiros</div>
+              <div style="font-size:11px;color:var(--t2);margin-top:1px">Casos de Uso · UML · Testes</div>
+              <span style="font-size:10px;font-weight:700;text-transform:uppercase;padding:2px 8px;border-radius:20px;display:inline-block;margin-top:4px;background:#DBEAFE;color:#1E40AF">🔍 Análise e Requisitos</span>
+            </div>
+            <div style="text-align:right;flex-shrink:0;margin-left:6px">
+              <div style="color:#F59E0B;font-size:12px">★★★★☆</div>
+              <div style="font-size:10px;font-weight:600;color:#9CA3AF;margin-top:1px">● Offline</div>
+            </div>
+          </div>
+          <div style="font-size:10px;color:var(--t3);margin-bottom:8px">RGM: 42490359</div>
+          <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px"><span style="font-size:10px;font-weight:600;padding:3px 10px;border-radius:20px;background:#DBEAFE;color:#1E40AF">Casos de Uso</span><span style="font-size:10px;font-weight:600;padding:3px 10px;border-radius:20px;background:#DBEAFE;color:#1E40AF">UML</span><span style="font-size:10px;font-weight:600;padding:3px 10px;border-radius:20px;background:#DBEAFE;color:#1E40AF">Testes</span></div>
+          <button style="width:100%;padding:12px;background:#9CA3AF;color:#fff;border:none;border-radius:12px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit" disabled>Solicitar mentoria</button>
+        </div>
         <div style="text-align:center;padding:16px 0 6px;font-size:11px;color:var(--t3)">MentorIA · Projeto Acadêmico 2026<br><span style="font-size:10px">Aplicativo de Mentoria e Alfabetização Tecnológica</span></div>
       </div>
     </div>
 
   </div>
 
-  <div class="tabs">
+    <div class="tabs">
     <button class="tab act" id="t0" onclick="go('s-home');st(0)"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>Início<div class="dot"></div></button>
     <button class="tab" id="t1" onclick="go('s-foto');st(1)"><svg viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>Foto<div class="dot"></div></button>
     <button class="tab" id="t2" onclick="go('s-voz');st(2)"><svg viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>Voz<div class="dot"></div></button>
-    <button class="tab" id="t3" onclick="go('s-mentores');st(3)"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Equipe<div class="dot"></div></button>
+    <button class="tab" id="t3" onclick="go('s-trilhas');st(3)"><svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>Trilhas<div class="dot"></div></button>
+    <button class="tab" id="t4" onclick="go('s-mentores');st(4)"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Equipe<div class="dot"></div></button>
   </div>
 </div>
 <script>
