@@ -45,9 +45,9 @@ Além disso, o app conecta alunos a **mentores voluntários** e oferece **trilha
 
 ## Demonstração ao vivo
 
-🔗 **App publicado:** [[mentoria-tech-demo.lovable.app](https://pixel-perfect-clone-4625.lovable.app/)
+🔗 **App publicado:** [[mentoria-tech-demo.lovable.app](https://mentoriaunicid.lovable.app)
 
-🎨 **Protótipo Figma:** [Ver no Figma](https://www.figma.com/make/CjKBynEQVHkoK0aJxvS9SH/Criar-template)
+🎨 **Protótipo Figma:** [Ver no Figma](https://www.figma.com/make/Vh6FEdnoIXsyHj3614c2xm/Criar-um-template?p=f)
 
 https://github.com/wallacyti/MentorIA
 
